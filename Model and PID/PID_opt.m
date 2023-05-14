@@ -1,0 +1,20 @@
+%clear;
+%clc;
+global q_opt %q_opt2
+kp_init = 7323;
+ki_init = 46351;
+kd_init = 269;
+% set_param('Quarter_Vehical_model_pid_opt/PID controller/kp','Gain',num2str(kp_init));
+% set_param('Quarter_Vehical_model_pid_opt/PID controller/ki','Gain',num2str(ki_init));
+% set_param('Quarter_Vehical_model_pid_opt/PID controller/kd','Gain',num2str(kd_init));
+% sim Quarter_Vehical_model_pid_opt;
+% q_opt2 = iae2;
+X0=[kp_init, ki_init, kd_init];
+options = optimset('Display','iter','TolX',1e-5,'TolFun',1e-4,'MaxIter',400);
+X=fminsearch('RMS_opt',X0,options);
+X_opt = X;
+q = q_opt;
+disp(['k_prop: ',num2str(X(1))]);
+disp(['k_integ: ',num2str(X(2))]);
+disp(['k_deriv: ',num2str(X(3))]);
+disp(['RMS1',num2str(q_opt)]);
