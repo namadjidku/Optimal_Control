@@ -13,15 +13,16 @@ system (the manual switch in the right-hand side should be switched to the outpu
 
 ### LQR
 
-1.Open the files "GENA_LQR2_run.m", "GENA_LQR2.m", "Quarter_LQRGENA_wh2".
-2.Run "GENA_LQR2_run.m".
-3.Select a road disturbance in the simulink model "Quarter_LQRGENA_wh2" and run the simulink model.
-4.Click "scope" and "scope2" in the right-hand side of the simulink model to check the suspension stroke and verticle acceleration compared with the passive suspension system.
+To run the code please execute the following extractions:
+1. Open the files "GENA_LQR2_run.m", "GENA_LQR2.m", "Quarter_LQRGENA_wh2"
+2. Run "GENA_LQR2_run.m"
+3. Select a road disturbance in the simulink model "Quarter_LQRGENA_wh2" and run the simulink model
+4. Click "scope" and "scope2" in the right-hand side of the simulink model to check the suspension stroke and verticle acceleration compared with the passive suspension system
 
-Note:
-"GENA_LQR2.m" creates a function "GENA_LQR2" to be called in "GENA_LQR2_run.m".
-You can change the fitness function in "GENA_LQR2.m" as you need.
-You can change the parameters of genetic algorithm in "GENA_LQR2_run.m".
+Please note:
+- "GENA_LQR2.m" creates a function "GENA_LQR2" that will be called in "GENA_LQR2_run.m"
+- You can change the fitness function in "GENA_LQR2.m" for your application 
+- You can modify the parameters of genetic algorithm in "GENA_LQR2_run.m"
 
 ### DDPG
 Please perform the following actions to run the code:
