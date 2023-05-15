@@ -11,6 +11,8 @@ The m file 'PID_opt' and 'RMS_opt' should be put under same directory. The 'PID_
 of 'PID_opt'. To run the optimization for a specified road profile, the input should be selected manually and the system should be active suspension
 system (the manual switch in the right-hand side should be switched to the output of the PID controller)
 
+
+
 ### LQR
 
 To run the code please execute the following extractions:
@@ -23,6 +25,8 @@ Please note:
 - "GENA_LQR2.m" creates a function "GENA_LQR2" that will be called in "GENA_LQR2_run.m"
 - You can change the fitness function in "GENA_LQR2.m" for your application 
 - You can modify the parameters of genetic algorithm in "GENA_LQR2_run.m"
+
+
 
 ### DDPG
 Please perform the following actions to run the code:
