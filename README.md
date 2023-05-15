@@ -24,21 +24,25 @@ You can change the fitness function in "GENA_LQR2.m" as you need.
 You can change the parameters of genetic algorithm in "GENA_LQR2_run.m".
 
 ### DDPG
-1)open the DDPG.slx file
-2)Load the parameters.m file
-3)Run the DDPG_Train.m file
+Please perform the following actions to run the code:
+- Open DDPG.slx file
+- Load parameters.m file
+- Run DDPG_Train.m file
 
-after that run the following commands on command window for training
-
+After this sequence, please run the following command on command window for training the agent:
+```Matlab
 trainingStats = agent.train(env,trainOpts);
+```
 
-After training run the following commands on command window
-
+Once the training is completed, please run the following commands on command window:
+```Matlab
 simOpts = rlSimulationOptions(MaxSteps=ceil(Tf/Ts),StopOnError="on");
 experiences = env.sim(agent,simOpts);
-  
+```
 
-Or you can already load the trained agent
+Alternatively, you can already load the pre-trained agent:
+```Matlab
 load("trained_agent","agent")
+```
 
-Finally run the DDPG simulink File.
+Finally, please run the DDPG simulink file
