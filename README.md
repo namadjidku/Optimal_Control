@@ -3,13 +3,14 @@
 The project contains three folders dedicated to each technique. Please refer to the correspoding section for running instructions.
 
 ### PID 
-The m file 'parameters' need to be run first to write parameters in simulink blocks before running the simulink model.
+Before running simulink model, please run "parameters.m" file to load required parameters into simulink block.
+
 In the simulink model, the manual switches in the left-hand side are for selection of road disturbances. The manual switch in the right-hand 
-side is for the switching between the passive suspension system and active suspension system. When the switch is on the constant '0', the system
+side are for switching between the passive suspension system and active suspension system. Specifically, when the switch is on the constant '0', the system
 is operating as a passive suspension system.
-The m file 'PID_opt' and 'RMS_opt' should be put under same directory. The 'PID_opt' is the main code for optimization and 'RMS_opt' is a sub-function
-of 'PID_opt'. To run the optimization for a specified road profile, the input should be selected manually and the system should be active suspension
-system (the manual switch in the right-hand side should be switched to the output of the PID controller)
+
+Files "PID_opt" and "RMS_opt" should be placed in the same directory. The "PID_opt" file is the main code for optimization and "RMS_opt" is a sub-function
+of "PID_opt". To run the optimization for a specific road profile (specific out of three available), the input should be selected manually and the system should be in the mode active suspension system + (the manual switch in the right-hand side should be switched to the output of the PID controller).
 
 
 
